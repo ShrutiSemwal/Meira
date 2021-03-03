@@ -132,8 +132,8 @@ button:last-child{
         
     </video>
 </div>
-<button class="button">Login</button> </br>
-<button class="button">Register</button>
+<!--<button class="button">Login</button> </br>
+<button class="button">Register</button>-->
 </body>
 </html>
 
