@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     
     <title>@yield('title','Current Page')</title>
 
@@ -32,6 +33,7 @@
       </li>
       <li>
         <a href="">
+        
           <svg class="icon"><use xlink:href="#icon-mail_outline"></use></svg> Appointment Scheduling
           <!--<div class="tag">0</div>-->
         </a>
@@ -44,13 +46,12 @@
       </li>
       <li>
         <a href="">
-        
           <svg class="icon"><use xlink:href="#icon-bell2"></use></svg> Doctors' Profile
           <!--<div class="tag">0</div>-->
         </a>
         <ul class="secnav">
         <li>
-            <a href="">Departments</a>
+            <a href="">Speciality</a>
           </li>
           </ul>
       </li>
@@ -60,13 +61,10 @@
         </a>
         <ul class="secnav">
           <li>
+            <a href="">Admin</a>
+          </li>
+          <li>
             <a href="">Users</a>
-          </li>
-          <li>
-            <a href="">Lists</a>
-          </li>
-          <li>
-            <a href="">Calendar</a>
           </li>
         </ul>
       </li>
@@ -101,7 +99,7 @@
 
 
 
-<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="position: absolute; width:0; height:0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 
     

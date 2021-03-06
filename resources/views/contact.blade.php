@@ -11,9 +11,6 @@ Contact Us
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       body {
 		
@@ -23,80 +20,135 @@ Contact Us
         background-position: center;
       }
 
-      .container{
-	
-		height: 400px;
-	}
-	.col-md-3{
-		background-color: black;
-		padding: 4%;		
-	}
 
-	.col-md-9{
-	   background-image: transparent;
-		
-	}
-	.contact-form label{
-		font-weight:600;
-	}
-	.contact-form button{
-		background:black;;
-		color: #fff;
-		font-weight: 600;
-		width: 25%;
-	}
-	.contact-form button:focus{
-		box-shadow:none;
-	}
+
+
+/* form animation starts */
+.form {
+  background: transparent;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top:60px;
+  border-top: 5px solid black;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  font-family: sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle{
+  font-size: 2em;
+  font-weight: bold;
+}
+.secondaryTitle{
+  color: grey;
+}
+
+.name {
+  background-color: #ebebeb;
+  color: black;
+}
+.name:hover {
+  border-bottom: 5px solid black;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.email {
+  background-color: #ebebeb;
+  height: 2em;
+}
+
+.email:hover {
+  border-bottom: 5px solid black;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+
+.message:hover {
+  border-bottom: 5px solid black;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid white;
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+} 
+
     </style>
 </head>
+
 <body>
 
-<div class="container">
-	<div class="row">
-		<div class="col-md-3">
-			<div class="contact-info">
-				<img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
-				<h2>Contact Us</h2>
-				<h4>We would love to hear from you !</h4>
-			</div>
-		</div>
-		<div class="col-md-9">
-			<div class="contact-form">
-				<div class="form-group">
-				  <label class="control-label col-sm-2" for="fname">First Name:</label>
-				  <div class="col-sm-10">          
-					<input type="text" class="form-control" name="fname" placeholder="Enter First Name" name="fname">
-				  </div>
-				</div>
-				<div class="form-group">
-				  <label class="control-label col-sm-2" for="lname">Last Name:</label>
-				  <div class="col-sm-10">          
-					<input type="text" class="form-control" name="lname" placeholder="Enter Last Name" name="lname">
-				  </div>
-				</div>
-				<div class="form-group">
-				  <label class="control-label col-sm-2" for="email">Email:</label>
-				  <div class="col-sm-10">
-					<input type="email" class="form-control" name="email" placeholder="Enter email" name="email">
-				  </div>
-				</div>
-				<div class="form-group">
-				  <label class="control-label col-sm-2" for="feedback">Feedback/Query:</label>
-				  <div class="col-sm-10">
-					<textarea class="form-control" rows="5" name="feedback"></textarea>
-				  </div>
-				</div>
-				<div class="form-group">        
-				  <div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default" name="submit">Submit</button>
-				  </div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+<div class="wrapper">
+    <form class="form">
+      <div class="pageTitle title">Contact Us </div>
+      <div class="secondaryTitle title">We would love to hear from you!</div>
+      <input type="text" class="name formEntry" placeholder="Name" />
+      <input type="text" class="email formEntry" placeholder="Email"/>
+      <textarea class="message formEntry" placeholder="Feedback/Query"></textarea>
+      <button class="submit formEntry" onclick="thanks()">Submit</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
 
 </body>
 </html>

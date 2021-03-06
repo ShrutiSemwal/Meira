@@ -19,7 +19,7 @@ About Us
         background-position: center;
       }
 
-      .blockquote-wrapper {
+.blockquote-wrapper {
    
    position:relative;
    display:flex;
