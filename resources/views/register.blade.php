@@ -194,7 +194,7 @@ button:focus {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   position:relative;
-  right:-20%;
+  right:-48%;
   top:60px;
   background: black;
   height: 80%;
@@ -302,7 +302,17 @@ button:focus {
      </h1>
     <h4>&mdash;Irish proverb<br></h4>
   </div>
-
+  @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+  <form action="/signup" method="POST">
+  @csrf
   <div class='bold-line'></div>
 <div class='container'>
   <div class='window'>
@@ -311,11 +321,11 @@ button:focus {
       <div class='welcome'>Hello There!</div>
       <div class='subtitle'><b>We're almost done. Before using our services please create an account.</b></div>
       <div class='input-fields'>
-        <input type='text' placeholder='Username' class='input-line full-width'></input>
-        <input type='text' placeholder='Contact no.' class='input-line full-width'></input>
-        <input type='email' placeholder='Email' class='input-line full-width'></input>
-        <input type='password' placeholder='Set Password' class='input-line full-width'></input>
-        <input type='password' placeholder='Confirm Password' class='input-line full-width'></input>
+        <input type='text' placeholder='Username' class='input-line full-width' name='username'></input>
+        <input type='text' placeholder='Contact no.' class='input-line full-width' name='contact'></input>
+        <input type='email' placeholder='Email' class='input-line full-width' name='email'></input>
+        <input type='password' placeholder='Set Password' class='input-line full-width' name='password'></input>
+        <input type='password' placeholder='Confirm Password' class='input-line full-width' name='cpassword'></input>
 
       </div>
       <!--<div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>-->
@@ -323,6 +333,7 @@ button:focus {
     </div>
   </div>
 </div>
+</form>
 
 </div>
 

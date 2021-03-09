@@ -33,6 +33,17 @@
       </li>
       <li>
         <a href="">
+          <svg class="icon"><use xlink:href="#icon-bell2"></use></svg> Doctors' Profile
+          <!--<div class="tag">0</div>-->
+        </a>
+        <ul class="secnav">
+        <li>
+            <a href="">Speciality</a>
+          </li>
+          </ul>
+      </li>
+      <li>
+        <a href="">
         
           <svg class="icon"><use xlink:href="#icon-mail_outline"></use></svg> Appointment Scheduling
           <!--<div class="tag">0</div>-->
@@ -46,25 +57,14 @@
       </li>
       <li>
         <a href="">
-          <svg class="icon"><use xlink:href="#icon-bell2"></use></svg> Doctors' Profile
-          <!--<div class="tag">0</div>-->
-        </a>
-        <ul class="secnav">
-        <li>
-            <a href="">Speciality</a>
-          </li>
-          </ul>
-      </li>
-      <li>
-        <a href="">
           <svg class="icon"><use xlink:href="#icon-equalizer"></use></svg> System Administration
         </a>
         <ul class="secnav">
           <li>
-            <a href="">Admin</a>
+            <a href="">Doctors</a>
           </li>
           <li>
-            <a href="">Users</a>
+            <a href="">Patients</a>
           </li>
         </ul>
       </li>
@@ -87,8 +87,9 @@
       <li><a class="tab" href="/">Home</a></li>
       <li><a class="tab" href="/register">Register</a></li>
       <li><a class="tab" href="/login">Login</a></li>
-      <li><a class="tab" href="/aboutUs">About Us</a></li>
       <li><a class="tab" href="/contactUs">Contact Us</a></li>
+      <li><a class="tab" href="/aboutUs">About Us</a></li>
+      
     </ul>
   </nav>
   <!--Variable Content-->

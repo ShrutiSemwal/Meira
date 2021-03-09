@@ -186,11 +186,11 @@ Login
   <h2>Welcome Back!</h2>
   <form>
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="username" required="">
       <label>Username</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input type="password" name="password" required="">
       <label>Password</label>
     </div>
     <a href="#">
@@ -200,7 +200,7 @@ Login
       <span></span>
       Submit
     </a>
-    <a href="#">
+    <a href="/register">
       <span></span>
       <span></span>
       <span></span>

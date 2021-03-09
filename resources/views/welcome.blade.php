@@ -5,6 +5,8 @@ Meira-Your Wellbeing
 @endsection
 
 @section('content')
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +126,7 @@ button:last-child{
     
 </head>
 <body>
-
+Hello, {{$username}}
 <div class="fullscreen-bg">
     <video  muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
         

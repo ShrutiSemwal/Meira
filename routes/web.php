@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\registerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('/aboutUs', function () {
 Route::get('/contactUs', function () {
     return view('contact');
 });
+
+Route::post('/signup',[registerController::class,'display']);
