@@ -194,7 +194,7 @@ button:focus {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   position:relative;
-  right:-48%;
+  right:-30%;
   top:60px;
   background: black;
   height: 80%;

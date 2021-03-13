@@ -17,9 +17,9 @@ class registerController extends Controller
         $username=$request->input('username');
 
         $request-> validate([
-            'username'=>'required| max: 20 | min: 3',
-            'contact'=>'required',
-            'email'=>'required',
+            'username'=>'required| max: 20 | min: 3 | string',
+            'contact'=>'required | digits:10',
+            'email'=>'required |  email:dns',
             'password'=>'required',
             'cpassword'=>'required',
         ]);

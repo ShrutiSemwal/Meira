@@ -6,6 +6,11 @@ Meira-Your Wellbeing
 
 @section('content')
 
+@if(isset($username))
+  <h2>Hello, {{$username}} </h2>
+
+
+@endif
 
 <!DOCTYPE html>
 <html lang="en">
@@ -125,8 +130,9 @@ button:last-child{
     </style>
     
 </head>
+
 <body>
-Hello, {{$username}}
+
 <div class="fullscreen-bg">
     <video  muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
         
