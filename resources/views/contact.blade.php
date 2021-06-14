@@ -136,15 +136,35 @@ Contact Us
     </style>
 </head>
 
+<!--@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif-->
 <body>
 
 <div class="wrapper">
-    <form class="form">
+
+    <form class="form" action="/contactUs" method="post">
+    @csrf
       <div class="pageTitle title">Contact Us </div>
       <div class="secondaryTitle title">We would love to hear from you!</div>
-      <input type="text" class="name formEntry" placeholder="Name" />
-      <input type="text" class="email formEntry" placeholder="Email"/>
-      <textarea class="message formEntry" placeholder="Feedback/Query"></textarea>
+      <input type="text" class="name formEntry" placeholder="Name" name="name" />
+      @if($errors->has('name'))
+    <div class="error">{{ $errors->first('name') }}</div>
+     @endif
+      <input type="text" class="email formEntry" placeholder="Email" name="email"/>
+      @if($errors->has('email'))
+    <div class="error">{{ $errors->first('email') }}</div>
+     @endif
+      <textarea class="message formEntry" placeholder="Feedback/Query" name="feedback"></textarea>
+      @if($errors->has('feedback'))
+    <div class="error">{{ $errors->first('feedback') }}</div>
+     @endif
       <button class="submit formEntry" onclick="thanks()">Submit</button>
     </form>
   </div>

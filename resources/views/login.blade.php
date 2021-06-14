@@ -182,24 +182,43 @@ Login
     </style>
 </head>
 <body>
+
+<!--@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif-->
+  
 <div class="login-box">
+
   <h2>Welcome Back!</h2>
-  <form>
+  <form action="/login" method="POST">
+  @csrf
     <div class="user-box">
       <input type="text" name="username" required="">
+      @if($errors->has('username'))
+    <div class="error">{{ $errors->first('username') }}</div>
+     @endif
       <label>Username</label>
     </div>
     <div class="user-box">
       <input type="password" name="password" required="">
+      @if($errors->has('password'))
+    <div class="error">{{ $errors->first('password') }}</div>
+     @endif
       <label>Password</label>
     </div>
-    <a href="#">
+    <div> <a href="">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Submit
-    </a>
+        Submit 
+    </a>  </div>
     <a href="/register">
       <span></span>
       <span></span>
@@ -209,7 +228,6 @@ Login
     </a>
   </form>
 </div>
-
 
 </body>
 </html>

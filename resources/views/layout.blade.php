@@ -33,7 +33,7 @@
       </li>
       <li>
         <a href="">
-          <svg class="icon"><use xlink:href="#icon-bell2"></use></svg> Doctors' Profile
+          <svg class="icon"><use xlink:href="#icon-mail_outline"></use></svg> Doctors' Profile
           <!--<div class="tag">0</div>-->
         </a>
         <ul class="secnav">
@@ -45,7 +45,7 @@
       <li>
         <a href="">
         
-          <svg class="icon"><use xlink:href="#icon-mail_outline"></use></svg> Appointment Scheduling
+          <svg class="icon"><use xlink:href="#icon-bell2"></use></svg> Appointment Scheduling
           <!--<div class="tag">0</div>-->
         </a>
         <ul class="secnav">

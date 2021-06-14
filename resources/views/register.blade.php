@@ -301,8 +301,8 @@ button:focus {
     are the best cures <span style="color:#ffffff">in the doctor’s book."</span>
      </h1>
     <h4>&mdash;Irish proverb<br></h4>
-  </div>
-  @if ($errors->any())
+</div>
+  <!--@if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -310,8 +310,8 @@ button:focus {
             @endforeach
         </ul>
     </div>
-@endif
-  <form action="/signup" method="POST">
+@endif-->
+  <form action="/register" method="POST">
   @csrf
   <div class='bold-line'></div>
 <div class='container'>
@@ -322,11 +322,25 @@ button:focus {
       <div class='subtitle'><b>We're almost done. Before using our services please create an account.</b></div>
       <div class='input-fields'>
         <input type='text' placeholder='Username' class='input-line full-width' name='username'></input>
+        @if($errors->has('username'))
+    <div class="error">{{ $errors->first('username') }}</div>
+       @endif
         <input type='text' placeholder='Contact no.' class='input-line full-width' name='contact'></input>
+        @if($errors->has('contact'))
+    <div class="error">{{ $errors->first('contact') }}</div>
+       @endif
         <input type='email' placeholder='Email' class='input-line full-width' name='email'></input>
+        @if($errors->has('email'))
+    <div class="error">{{ $errors->first('email') }}</div>
+       @endif
         <input type='password' placeholder='Set Password' class='input-line full-width' name='password'></input>
-        <input type='password' placeholder='Confirm Password' class='input-line full-width' name='cpassword'></input>
-
+        @if($errors->has('password'))
+    <div class="error">{{ $errors->first('password') }}</div>
+       @endif
+        <input type='password' placeholder='Confirm Password' class='input-line full-width' name='cpassword'></input>  
+        @if($errors->has('cpassword'))
+    <div class="error">{{ $errors->first('cpassword') }}</div>
+       @endif     
       </div>
       <!--<div class='spacing'>or continue with <span class='highlight'>Facebook</span></div>-->
       <div><button class='ghost-round full-width'>Create Account</button></div>

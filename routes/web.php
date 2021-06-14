@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\doctorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,10 @@ Route::get('/contactUs', function () {
     return view('contact');
 });
 
-Route::post('/signup',[registerController::class,'display']);
+Route::post('/register',[registerController::class,'registerDisplay']);
+
+Route::post('/login',[registerController::class,'loginDisplay']);
+
+Route::post('/contactUs',[registerController::class,'contactDisplay']);
+
+Route::get('/doctors',[doctorController::class,'index']);

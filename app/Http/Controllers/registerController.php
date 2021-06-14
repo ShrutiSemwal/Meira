@@ -12,7 +12,7 @@ class registerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function display(Request $request)
+    public function registerDisplay(Request $request)
     {
         $username=$request->input('username');
 
@@ -25,5 +25,35 @@ class registerController extends Controller
         ]);
 
         return view('welcome',['username'=>$username]);
+    }
+
+    public function loginDisplay(Request $req)
+    {
+        $username=$req->input('username');
+        $password=$req->input('password');
+
+        $req-> validate([
+            'username'=>'required|max:20| min:3| string',
+            'password'=>'required',
+        ]);
+
+        return view('welcome',['username'=>$username]);
+
+        
+    }
+
+    function contactDisplay(Request $reqt)
+    {
+        $name=$reqt->input('name');
+        $email=$reqt->input('email');
+        $feedback=$reqt->input('feedback');
+
+        $reqt-> validate([
+              'name'=>'required|max:20| min:3| string',
+              'email'=>'required |  email:dns',
+              'feedback'=>'required',
+        ]);
+
+        echo "Thank you!";
     }
 }
