@@ -29,11 +29,11 @@ class registerController extends Controller
 
     public function loginDisplay(Request $req)
     {
-        $username=$req->input('username');
+        $username=$req->input('name');
         $password=$req->input('password');
 
         $req-> validate([
-            'username'=>'required|max:20| min:3| string',
+            'name'=>'required|max:20| min:3| string',
             'password'=>'required',
         ]);
 

@@ -32,13 +32,13 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="/doctors">
           <svg class="icon"><use xlink:href="#icon-mail_outline"></use></svg> Doctors' Profile
           <!--<div class="tag">0</div>-->
         </a>
         <ul class="secnav">
         <li>
-            <a href="">Speciality</a>
+            <a href="/doctors">Speciality</a>
           </li>
           </ul>
       </li>
